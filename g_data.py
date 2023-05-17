@@ -131,7 +131,7 @@ if __name__ == "__main__":
     data_files = load_json_data()
     selected_file = get_file_data(file_target="pokemon.csv", data_files = data_files)
     file_data = download_file('pokemon.csv', data_files)
-    # save_pickle_file(file_data, selected_file)
+    save_pickle_file(file_data, selected_file)
 
     selected_file_name = selected_file['name']
     desired_pickle_file_path = f'/home/ra-terminal/Desktop/portfolio_projects/g_drive_data_repo/pickle_files/{selected_file_name}.pickle'
