@@ -16,11 +16,7 @@ from httplib2 import Http
 from oauth2client import client, file, tools
 from oauth2client.file import Storage
 
-#clients secrets in local directory
-# client_secrets_file_path = '/home/ra-terminal/Desktop/portfolio_projects/g_drive_data_repo/client_secret_1089494195663-b3paf99mi4gc07dgfchp3sq0ffhc18tk.apps.googleusercontent.com.json:Zone.Identifier'
-# credentials_file_path = '/home/ra-terminal/Desktop/portfolio_projects/g_drive_data_repo/client_secrets.json'
 
-client_secrets_file_path = '/home/ra-terminal/api_keys/google_key/g_drive_credentials/client_secret_1089494195663-b3paf99mi4gc07dgfchp3sq0ffhc18tk.apps.googleusercontent.com.json:Zone.Identifier'
 credentials_file_path = '/home/ra-terminal/api_keys/google_key/g_drive_credentials/client_secrets.json'
 client_secrets_file_path = credentials_file_path
 gauth = GoogleAuth(client_secrets_file_path)
