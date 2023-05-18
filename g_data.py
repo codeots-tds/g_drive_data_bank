@@ -3,6 +3,7 @@ import pandas as pd
 from io import StringIO
 import io
 import sys
+import pickle
 
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
@@ -26,7 +27,6 @@ gauth = GoogleAuth(client_secrets_file_path)
 gauth.LoadClientConfigFile(client_secrets_file_path)
 gauth = GoogleAuth()
 
-import pickle
 # """
 # Note that gauth.CommandLineAuth() is typically used in command-line applications 
 # where a graphical user interface is not available. If you are building a graphical application, 
@@ -120,11 +120,8 @@ def save_pickle_file(str_content, file):
 def read_pickle_in_pandas(filepath):
     data_obj = pickle.load(open(filepath, 'rb'))
     df = pd.read_csv(io.StringIO(data_obj))
-    print(df.columns)
     return df
 
-
-# pokemon_df = read_in_pandas('pokemon.csv')
 if __name__ == "__main__":
     root_file_id = 'root'
 
